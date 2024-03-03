@@ -1,7 +1,7 @@
 import Id from "../../../@shared/domain/value-object/id.value-object";
 import Invoice from "../../domain/invoice.entity";
 import InvoiceItems from "../../domain/invoice.items.entity";
-import Address from "../../value-object/address";
+import Address from "../../../@shared/domain/value-object/address";
 import FindInvoiceUseCase from "./find-invoice.usecase";
 
 
@@ -25,8 +25,8 @@ const invoice = new Invoice({
         "Street",
         "1",
         "complement",
-        "state",
         "city",
+        "state",
         "12345",
     ),
     items:[item1, item2],

@@ -1,7 +1,7 @@
 import Id from "../../@shared/domain/value-object/id.value-object";
 import AggregateRoot from "../../@shared/domain/entity/aggregate-root.interface";
 import BaseEntity from "../../@shared/domain/entity/base.entity";
-import Address from "../value-object/address";
+import Address from "../../@shared/domain/value-object/address";
 import InvoiceItems from "./invoice.items.entity";
 
 type InvoceProps = {

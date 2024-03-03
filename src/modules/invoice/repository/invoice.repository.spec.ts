@@ -3,7 +3,7 @@ import InvoiceModel from "./invoice.model";
 import InvoiceItemsModel from "./invoice.items.model";
 import Invoice from "../domain/invoice.entity";
 import Id from "../../@shared/domain/value-object/id.value-object";
-import Address from "../value-object/address";
+import Address from "../../@shared/domain/value-object/address";
 import InvoiceItems from "../domain/invoice.items.entity";
 import InvoiceRepository from "./invoice.repository";
 
@@ -15,8 +15,8 @@ const invoiceProps = {
       "Street",
       "1",
       "complement",
-      "state",
       "city",
+      "state",      
       "12345",
   ),
   items:[new InvoiceItems({
@@ -34,8 +34,8 @@ const invoiceProps2 = {
       "Street 2",
       "2",
       "complement 2",
-      "state 2 ",
       "city 2",
+      "state 2 ",
       "123",
   ),
   items:[new InvoiceItems({

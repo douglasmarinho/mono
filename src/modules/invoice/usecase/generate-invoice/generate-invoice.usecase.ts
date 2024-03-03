@@ -3,7 +3,7 @@ import { GenerateInvoiceUseCaseInputDto, GenerateInvoiceUseCaseOutputDto } from 
 import Invoice from "../../domain/invoice.entity"
 import InvoiceItems from "../../domain/invoice.items.entity"
 import Id from "../../../@shared/domain/value-object/id.value-object";
-import Address from "../../value-object/address";
+import Address from "../../../@shared/domain/value-object/address";
 
 export default class GenerateInvoiceUseCase{
 
@@ -28,8 +28,8 @@ export default class GenerateInvoiceUseCase{
                 input.street,
                 input.number,
                 input.complement,
-                input.state,
-                input.city,                
+                input.city,   
+                input.state,             
                 input.zipCode,
             ),
             items: items

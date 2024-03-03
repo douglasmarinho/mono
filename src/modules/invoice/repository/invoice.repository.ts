@@ -2,7 +2,7 @@ import Id from "../../@shared/domain/value-object/id.value-object";
 import Invoice from "../domain/invoice.entity";
 import InvoiceItems from "../domain/invoice.items.entity";
 import InvoiceGateway from "../gateway/invoce.gateway";
-import Address from "../value-object/address";
+import Address from "../../@shared/domain/value-object/address";
 import InvoiceItemsModel from "./invoice.items.model";
 import InvoiceModel from "./invoice.model";
 
@@ -58,8 +58,8 @@ export default class InvoiceRepository implements InvoiceGateway{
                 invoiceModel.street,
                 invoiceModel.number,
                 invoiceModel.complement,
-                invoiceModel.state,
                 invoiceModel.city,
+                invoiceModel.state,
                 invoiceModel.zipCode,
             ),
             items: itemsDb,
