@@ -1,4 +1,4 @@
-import ProductAdmFacadeInterface, { AddProductAdmFacadeInputDto, CheckStockFacadeInputDto, CheckStockFacadeOutputDto } from "./product-adm.facade.interface";
+import ProductAdmFacadeInterface, { AddProductAdmFacadeInputDto, AddProductAdmFacadeOutputDto, CheckStockFacadeInputDto, CheckStockFacadeOutputDto } from "./product-adm.facade.interface";
 import UseCaseInterface from "../../@shared/usecase/use-case.interface";
 
 
@@ -17,10 +17,10 @@ export default class ProductAdmFacade implements ProductAdmFacadeInterface {
         this._checkStockUsecase = useCasesProps.stockUsecase;
     }
 
-    addProduct(input: AddProductAdmFacadeInputDto): Promise<void> {
-        return this._addUsecase.execute(input);
+    async addProduct(input: AddProductAdmFacadeInputDto): Promise<AddProductAdmFacadeOutputDto> {
+        return await this._addUsecase.execute(input);
     }
-    checkStock(input: CheckStockFacadeInputDto): Promise<CheckStockFacadeOutputDto> {
-        return this._checkStockUsecase.execute(input);
+    async checkStock(input: CheckStockFacadeInputDto): Promise<CheckStockFacadeOutputDto> {
+        return await this._checkStockUsecase.execute(input);
     }
 }
