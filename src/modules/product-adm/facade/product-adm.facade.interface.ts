@@ -4,6 +4,7 @@ export interface AddProductAdmFacadeInputDto{
     description: string;
     purchasePrice: number;
     stock: number;
+    salesPrice?: number;
 }
 
 export interface AddProductAdmFacadeOutputDto{
@@ -12,6 +13,7 @@ export interface AddProductAdmFacadeOutputDto{
     description: string;
     purchasePrice: number;
     stock: number;
+    salesPrice?: number;
 }
 
 export interface CheckStockFacadeInputDto{

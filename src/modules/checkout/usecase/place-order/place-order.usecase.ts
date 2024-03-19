@@ -110,6 +110,7 @@ export default class PlaceOrderUsecase implements UseCaseInterface {
     }    
     
     private async validateProducts(input: PlaceOrderInputDto): Promise<void> {
+
         if(input.products.length === 0 )
             throw new Error("No products selected");
 

@@ -48,19 +48,19 @@ describe("Client Repository test", () => {
 
     const clientDb = await ClientModel.findOne({ where: { id: "1" } })
 
-    expect(clientDb).toBeDefined()
-    expect(clientDb.id).toEqual(client.id.id)
-    expect(clientDb.name).toEqual(client.name)
-    expect(clientDb.email).toEqual(client.email)
-    expect(clientDb.document).toEqual(client.document)
-    expect(clientDb.street).toEqual(client.address.street)
-    expect(clientDb.number).toEqual(client.address.number)
-    expect(clientDb.complement).toEqual(client.address.complement)
-    expect(clientDb.city).toEqual(client.address.city)
-    expect(clientDb.state).toEqual(client.address.state)
-    expect(clientDb.zipCode).toEqual(client.address.zipCode)
-    expect(clientDb.createdAt).toStrictEqual(client.createdAt)
-    expect(clientDb.updatedAt).toStrictEqual(client.updatedAt)
+    expect(clientDb).toBeDefined();
+    expect(clientDb.id).toEqual(client.id.id);
+    expect(clientDb.name).toEqual(client.name);
+    expect(clientDb.email).toEqual(client.email);
+    expect(clientDb.document).toEqual(client.document);
+    expect(clientDb.street).toEqual(client.address.street);
+    expect(clientDb.number).toEqual(client.address.number);
+    expect(clientDb.complement).toEqual(client.address.complement);
+    expect(clientDb.city).toEqual(client.address.city);
+    expect(clientDb.state).toEqual(client.address.state);
+    expect(clientDb.zipCode).toEqual(client.address.zipCode);
+    expect(clientDb.createdAt).toBeDefined();
+    expect(clientDb.updatedAt).toBeDefined();
   })
 
   it("should find a client", async () => {

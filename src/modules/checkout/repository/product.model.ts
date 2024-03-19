@@ -19,7 +19,7 @@ export default class ProductModel extends Model{
     @Column({allowNull: true})
     purchasePrice: number;
 
-    @Column({allowNull: false})
+    @Column({allowNull: true})
     stock: number;
 
     @Column({allowNull: true})
