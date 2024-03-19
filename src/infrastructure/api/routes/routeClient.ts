@@ -10,7 +10,7 @@ clientRoute.post("/", async (req: Request, res: Response) => {
 
     const facade =  ClientAdmFacadeFactory.create();
     try {
-      const productDto: AddClientFacadeInputDto = {
+      const clientDto: AddClientFacadeInputDto = {
         name: req.body.name,
         email: req.body.email,
         document: req.body.document,
@@ -24,7 +24,7 @@ clientRoute.post("/", async (req: Request, res: Response) => {
           ),
       }
       
-      const output = await facade.add(productDto)
+      const output = await facade.add(clientDto)
       res.send(output)
     } catch (err) {
       res.status(500).send(err)

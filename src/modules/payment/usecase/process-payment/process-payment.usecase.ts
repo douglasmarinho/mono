@@ -19,7 +19,7 @@ export default class ProcessPayment{
         transaction.process();
 
         const persistTransaction = await this._paymentRepository.save(transaction);
-        console.log(persistTransaction);
+
         return {
             transactionId: persistTransaction.id.id,
             orderId: persistTransaction.orderId,
